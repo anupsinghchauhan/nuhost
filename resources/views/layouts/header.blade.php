@@ -109,7 +109,7 @@
          <div class="top-header-nav-home mb-auto">
             <div class="container">
                <nav class="navbar navbar-expand-md navbar-light header-nav-algo-coodiv header-nav-algo-coodiv-v2">
-                  <a class="navbar-brand" href="index.html">
+                  <a class="navbar-brand" href="{{URL('/')}}">
                   <img class="black-bg-logo" src="img/header/logo.png" alt />
                   <img class="white-bg-logo" src="img/header/logo-b.png" alt />
                   <span>30-day money back guarantee*</span>
@@ -122,32 +122,32 @@
                   <div class="collapse navbar-collapse navbar-offcanvas" id="offcanvas-menu-home">
                      <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown" href="#" id="indaxdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                           <a class="nav-link dropdown" href="{{URL('/')}}" id="indaxdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about-us.html">About us</a>
+                           <a class="nav-link" href="{{URL('about-us')}}">About us</a>
                         </li>
                         <li class="nav-item mega-dropdown">
-                           <a class="nav-link dropdown" href="#" id="megadrop-services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Services <span class="caret"></span></a>
+                           <a class="nav-link dropdown" href="{{URL('our-services')}}" id="megadrop-services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Services <span class="caret"></span></a>
                            <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="megadrop-services">
                               <div class="our-services-mega-menu-header">
                                  <div class="row justify-content-center our-services-mega-menu-header-items">
-                                    <a class="col-md-2" href="domain-search.html">
+                                    <a class="col-md-2" href="{{URL('domain-search')}}">
                                     <i class="flaticon-internet"></i>
                                     <span>Domains</span>
                                     <b>start $0.99</b>
                                     </a>
-                                    <a class="col-md-2" href="web-hosting.html">
+                                    <a class="col-md-2" href="{{URL('web-hosting')}}">
                                     <i class="flaticon-database-14"></i>
                                     <span>Web Hosting</span>
                                     <b>start $3.99</b>
                                     </a>
-                                    <a class="col-md-2" href="reseller-hosting.html">
+                                    <a class="col-md-2" href="{{URL('reseller-hosting')}}">
                                     <i class="flaticon-database-14"></i>
                                     <span>Web Hosting Plus</span>
                                     <b>start $0.39</b>
                                     </a>
-                                    <a class="col-md-2" href="WordPress-hosting.html">
+                                    <a class="col-md-2" href="{{URL('wordpress-hosting')}}">
                                     <i class="flaticon-database-14"></i>
                                     <span>Web Hosting Pro</span>
                                     <b>start $0.75</b>
