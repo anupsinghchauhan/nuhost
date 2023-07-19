@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Mirrored from demo.coodiv.net/html/nuhost/html/web-hosting.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jul 2023 18:10:40 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="nuhost responsive HTML & WHMCS hosting template">
+<meta name="author" content="coodiv.net (nedjai mohamed)">
+<link rel="icon" href="img/header/favicon.ico">
+<title>Nuhost - web hosting</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<link href="icons/flaticon.css" rel="stylesheet">
+
+<link href="icons-t/flaticon.css" rel="stylesheet">
+
+<link href="css/main.css" rel="stylesheet">
+
+<link href="css/bootstrap.offcanvas.min.css" rel="stylesheet">
+
+<link href="css/fontawesome-all.min.css" rel="stylesheet">
+
+<link href="css/animate.css" rel="stylesheet">
+
+<link href="css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+<link rel="stylesheet" href="css/flickity.min.css">
+
+<link rel="stylesheet" href="css/modal-video.min.css">
+
+<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+<link rel="stylesheet" href="technology-icon/flaticon.css">
+<script nonce="06d1ddd6-9b53-4b01-ad91-ad15dfb3aa42">(function(w,d){!function(j,k,l,m){j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz.q=[];j.zaraz._f=function(n){return function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const w of Object.entries(Object.entries(dataLayer).reduce(((x,y)=>({...x[1],...y[1]})),{})))zaraz.set(w[0],w[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const z=j.zaraz.q.shift();j[l].q.push(z)}r.defer=!0;for(const A of[localStorage,sessionStorage])Object.keys(A||{}).filter((C=>C.startsWith("_zaraz_"))).forEach((B=>{try{j[l]["z_"+B.slice(7)]=JSON.parse(A.getItem(B))}catch{j[l]["z_"+B.slice(7)]=A.getItem(B)}}));r.referrerPolicy="origin";r.src="../../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
+<body>
+
+<div class="modal fade" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="videomodal" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" id="video"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="preloader">
+<svg class="spinner" id="pageloader_anime" width="32px" height="32px" viewbox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+</svg>
+</div>
+
+
+<div id="header" class="homepagetwostyle d-flex mx-auto flex-column not-index-header">
+
+<div class="search-header-block">
+<form id="pitursrach-header" name="formsearch" method="get" action="https://demo.coodiv.net/html/nuhost/html/404.html">
+<input name="s" id="search" type="text" class="text" value placeholder="START TYPING AND PRESS ENTER TO SEARCH">
+<button type="submit" class="submit"><span class="fa fa-search"></span></button>
+<a class="closesrch-her-block np-dsp-block">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</a>
+</form>
+</div>
+
+
+<div class="header-animation">
+<div id="particles-bg"></div>
+<div class="video-bg-nuhost-header">
+<div id="video_cover"></div>
+<video autoplay muted loop><source src="media/coodiv-vid.mp4" type="video/mp4"></video>
+<span class="video-bg-nuhost-header-bg"></span>
+</div>
+<span class="courve-gb-hdr-top"></span>
+
+<a class="support-header-ring" href="#"><img src="img/svgs/support.svg" alt /> <span>support team</span></a>
+
+</div>
+
+
+<div class="top-header-nav-home mb-auto">
+<div class="container">
+<nav class="navbar navbar-expand-md navbar-light header-nav-algo-coodiv header-nav-algo-coodiv-v2">
+
+<a class="navbar-brand" href="index.html">
+<img class="black-bg-logo" src="img/header/logo.png" alt />
+
+<img class="white-bg-logo" src="img/header/logo-b.png" alt />
+
+<span>Top Hosting Provider</span>
+</a>
+
+<button class="navbar-toggle offcanvas-toggle menu-btn-span-bar ml-auto" data-toggle="offcanvas" data-target="#offcanvas-menu-home">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<div class="collapse navbar-collapse navbar-offcanvas" id="offcanvas-menu-home">
+
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown" href="#" id="indaxdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">home <span class="caret"></span></a>
+<div class="dropdown-menu" aria-labelledby="indaxdropdown">
+<a class="dropdown-item" href="index.html">homepage 01</a>
+<a class="dropdown-item" href="index-classic.html">homepage 02</a>
+<a class="dropdown-item" href="index-two.html">homepage 03</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about-us.html">About us</a>
+</li>
+<li class="nav-item mega-dropdown">
+<a class="nav-link dropdown" href="#" id="megadrop-services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Services <span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu" aria-labelledby="megadrop-services">
+<div class="our-services-mega-menu-header">
+<div class="row justify-content-center our-services-mega-menu-header-items">
+<a class="col-md-2" href="domain-search.html">
+<i class="flaticon-internet"></i>
+<span>domains</span>
+<b>start $0.99</b>
+</a>
+<a class="col-md-2" href="web-hosting.html">
+<i class="flaticon-database-14"></i>
+<span>web hosting</span>
+<b>start $3.99</b>
+</a>
+<a class="col-md-2" href="reseller-hosting.html">
+<i class="flaticon-database-24"></i>
+<span>resslers</span>
+<b>start $0.39</b>
+</a>
+<a class="col-md-2" href="WordPress-hosting.html">
+<i class="fab fa-wordpress-simple"></i>
+<span>WordPress</span>
+<b>start $0.75</b>
+</a>
+<a class="col-md-2" href="ddos.html">
+<i class="flaticon-shield-7"></i>
+<span>DDos</span>
+<b>start $1.99</b>
+</a>
+<a class="col-md-2" href="cloud-hosting.html">
+<i class="flaticon-server-3"></i>
+<span>clouds</span>
+<b>start $2.99</b>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item mega-dropdown">
+<a class="nav-link dropdown" href="#" id="megadrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Web Hosting <span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu" aria-labelledby="megadrop">
+<div class="price-mega-menu-home">
+<div class="row justify-content-center">
+<div class="col-md-4 banner-hosting-menu">
+<h5>start you<br> mini project now</h5>
+<p>with our mini hosting palns you will have the power to start your project</p>
+<a href="#">learn more</a>
+<span>from $3.55</span>
+</div>
+<div class="col-md-8 plans-hosting-menu">
+<h5>our hosting plans</h5>
+<div class="row justify-content-left">
+<div class="col-md-4 megamenu-plans">
+<h4 class="price-title">basic</h4>
+<span class="price-price">$3.55 <i>/monthly</i></span>
+<p class="price-text">with our mini hosting palns you will have the power to start your project</p>
+<ul class="megamenu-plans-li">
+<li><i class="fas fa-check"></i> unlimated <b>panwdith</b></li>
+<li><i class="fas fa-check"></i> unlimated <b>database</b></li>
+<li><i class="fas fa-check"></i> unlimated <b>space</b></li>
+<li class="not-included"><i class="fas fa-times"></i> free <b>domain</b></li>
+</ul>
+<a class="megamenu-plans-order" href="#">order now</a>
+</div>
+<div class="col-md-4 megamenu-plans">
+<h4 class="price-title">standard</h4>
+<span class="price-price">$5.11 <i>/monthly</i></span>
+<p class="price-text">with our mini hosting palns you will have the power to start your project</p>
+<ul class="megamenu-plans-li">
+<li><i class="fas fa-check"></i> unlimated <b>panwdith</b></li>
+<li><i class="fas fa-check"></i> unlimated <b>database</b></li>
+<li><i class="fas fa-check"></i> unlimated <b>space</b></li>
+<li class="not-included"><i class="fas fa-times"></i> free <b>domain</b></li>
+</ul>
+<a class="megamenu-plans-order" href="#">order now</a>
+</div>
+<div class="col-md-4 megamenu-plans no-border">
+<h4 class="price-title">premier</h4>
+<span class="price-price">$7.22 <i>/monthly</i></span>
+<p class="price-text">with our mini hosting palns you will have the power to start your project</p>
+<ul class="megamenu-plans-li">
+<li><i class="fas fa-check"></i> unlimated <b>panwdith</b></li>
+<li><i class="fas fa-check"></i> unlimated <b>database</b></li>
+<li><i class="fas fa-check"></i> unlimated <b>space</b></li>
+<li><i class="fas fa-check"></i> free <b>domain</b></li>
+</ul>
+<a class="megamenu-plans-order" href="#">order now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown" href="#" id="helpdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
+<div class="dropdown-menu" aria-labelledby="helpdropdown">
+<a class="dropdown-item" href="help-center.html">help center</a>
+<a class="dropdown-item" href="knowledgebase.html">knowledgebase</a>
+<a class="dropdown-item" href="blog.html">blog</a>
+<a class="dropdown-item" href="blog-single.html">blog single</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown" href="#" id="pagesdromdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+<div class="dropdown-menu" aria-labelledby="pagesdromdown">
+<a class="dropdown-item" href="404.html">404</a>
+<a class="dropdown-item" href="about-us.html">about us</a>
+<a class="dropdown-item" href="dedicated.html">dedicated hosting</a>
+<a class="dropdown-item" href="vps.html">vps servers</a>
+<a class="dropdown-item" href="cloud-hosting.html">cloud hosting</a>
+<a class="dropdown-item" href="contact.html">contact us</a>
+<a class="dropdown-item" href="ddos.html">ddos</a>
+<a class="dropdown-item" href="domain-results.html">domain results</a>
+<a class="dropdown-item" href="domain-search.html">domain search</a>
+<a class="dropdown-item" href="help-center.html">help center</a>
+<a class="dropdown-item" href="knowledgebase.html">knowledgebase</a>
+<a class="dropdown-item" href="Privacy.html">Privacy</a>
+<a class="dropdown-item" href="blog.html">blog</a>
+<a class="dropdown-item" href="blog-single.html">blog single</a>
+<a class="dropdown-item" href="reseller-hosting.html">reseller hosting</a>
+<a class="dropdown-item" href="web-hosting.html">web-hosting</a>
+<a class="dropdown-item" href="WordPress-hosting.html">WordPress-hosting</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact us</a>
+</li>
+<li class="nav-item">
+<a data-toggle="tooltip" data-placement="bottom" title="search" class="search-headr" href="#"><img src="img/svgs/search.svg" alt /></a>
+</li>
+</ul>
+
+</div>
+
+
+<ul class="account-place-header-nav">
+<li class="nav-item dropdown">
+<a data-toggle="dropdown" aria-haspopup="true" id="customarea" aria-expanded="false" class="accouting-h dropdown-toggle" href="#"><img src="img/svgs/avatar.svg" alt /></a>
+<div class="dropdown-menu login-drop-down-header" aria-labelledby="customarea">
+<form action="#" data-form="validate">
+<div class="form-group">
+<input type="email" name="username" placeholder="Your Email" class="form-control" required>
+</div>
+<div class="form-group">
+<input type="password" name="password" placeholder="Password" class="form-control" required>
+</div>
+<p class="help-block"><a href="#">Forgot Your Password?</a> <a href="#">Sign up</a></p>
+<button type="submit" class="btn btn-block btn-default text-uppercase">Login</button>
+</form>
+</div>
+</li>
+</ul>
+
+</nav>
+</div>
+</div>
+<main class="inner cover header-heeadline-title mb-auto">
+<h5><span class="blok-on-phon">web hosting</span></h5>
+<p>Clean Code for Startups, Companies, Designers and Developers</p>
+<div class="container">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb not-index-breadcrumb-header justify-content-center">
+<li class="breadcrumb-item"><a href="#">Homepage</a></li>
+<li class="breadcrumb-item"><a href="#">hosting services</a></li>
+<li class="breadcrumb-item active" aria-current="page">web hosting</li>
+</ol>
+</nav>
+</div>
+</main>
+<div class="mt-auto"></div>
+</div>
+<section class="padding-100-0">
+<div class="container">
+<div class="mr-tp-20">
+<div class="row">
+<div id="monthly-yearly-chenge" class="col align-self-start">
+
+<a class="active monthly-price">monthly price</a>
+<a class="yearli-price">yearly price</a>
+</div>
+
+<div class="col align-self-end plan-contact-support-button text-right">
+
+<a href="#"><i class="far fa-life-ring"></i> 00123 456 78 90 11</a>
+</div>
+
+</div>
+<div class="row justify-content-left">
+
+<div class="col-md-4">
+
+<div class="tree-steps-hosting-plans first">
+<div class="tree-steps-hosting-plans-header">
+<i class="fas fa-fire tree-steps-hosting-plans-icon"></i>
+<h5 class="tree-steps-hosting-plans-title">standard plan <small>for small projects</small></h5>
+
+<span class="tree-steps-hosting-plans-price monthly">
+<b class="monthly">$12<small>/month</small></b>
+<b class="yearly">$133<small>/year</small></b>
+</span>
+
+</div>
+<div id="first-plan-hosting-steps-content" class="tree-steps-hosting-plans-body first-plan-hosting-steps">
+
+<div class="loader-tree-steps-hosting-plans-body">
+
+<i class="fas fa-circle-notch rotate360icon"></i>
+</div>
+
+<ul class="tree-steps-hosting-plans-list">
+
+<li class="checked">2 TB of space</li>
+<li class="checked">unlimited bandwidth</li>
+<li class="checked">full backup systems</li>
+<li class="checked">free domain</li>
+<li class="checked">unlimited database</li>
+<li class="not-checked">live chat support</li>
+<li class="not-checked">phone support</li>
+</ul>
+
+<div class="tree-steps-hosting-plans-payment">
+
+
+<span id="first-plan-hosting" data-toggle="tooltip" data-placement="bottom" title="previous step" class="tree-steps-hosting-plans-footer-btn-back step-two-hosting">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+
+<h5 class="tree-steps-hosting-plans-payment-title">payment <small>please login to your account to continue </small></h5>
+<form class="tree-steps-hosting-plans-login-form" novalidate>
+<div class="col-md-12 mb-3">
+<label for="firstName">First name</label>
+<input type="text" class="form-control" id="firstName" placeholder value required>
+</div>
+<div class="col-md-12 mb-3">
+<label for="password">password</label>
+<input type="password" class="form-control" id="password" placeholder value required>
+</div>
+<div class="custom-control custom-checkbox">
+<input type="checkbox" class="custom-control-input" id="customCheck1">
+<label class="custom-control-label" for="customCheck1"><small>Remember Me</small></label>
+</div>
+</form>
+</div>
+
+</div>
+
+<div class="tree-steps-hosting-plans-footer text-center">
+
+<a id="first-plan-hosting-steps" class="tree-steps-hosting-plans-footer-btn first-step-hosting">
+
+<span class="first-step-hosting-text">
+<small>next step</small>
+<i class="fas fa-angle-right"></i>
+</span>
+
+
+<span class="second-step-hosting-text">
+login
+</span>
+
+</a>
+</div>
+
+</div>
+</div>
+
+<div class="col-md-4">
+
+<div class="tree-steps-hosting-plans second">
+<span class="tree-steps-hosting-plans-best">best plan</span>
+<div class="tree-steps-hosting-plans-header">
+<i class="fas fa-fire tree-steps-hosting-plans-icon"></i>
+<h5 class="tree-steps-hosting-plans-title">advenced plan <small>for small projects</small></h5>
+
+<span class="tree-steps-hosting-plans-price monthly">
+<b class="monthly">$15<small>/month</small></b>
+<b class="yearly">$140<small>/year</small></b>
+</span>
+
+</div>
+<div id="second-plan-hosting-steps-content" class="tree-steps-hosting-plans-body">
+
+<div class="loader-tree-steps-hosting-plans-body">
+
+<i class="fas fa-circle-notch rotate360icon"></i>
+</div>
+
+<ul class="tree-steps-hosting-plans-list">
+
+<li class="checked">2 TB of space</li>
+<li class="checked">unlimited bandwidth</li>
+<li class="checked">full backup systems</li>
+<li class="checked">free domain</li>
+<li class="checked">unlimited database</li>
+<li class="checked">live chat support</li>
+<li class="not-checked">phone support</li>
+</ul>
+
+<div class="tree-steps-hosting-plans-payment">
+
+
+<span id="second-plan-hosting" data-toggle="tooltip" data-placement="bottom" title="previous step" class="tree-steps-hosting-plans-footer-btn-back step-two-hosting">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+
+<h5 class="tree-steps-hosting-plans-payment-title">payment <small>choose your payment method </small></h5>
+<form class="tree-steps-hosting-plans-login-form payment-method-form" novalidate>
+<div class="row with-enic-padding">
+<div class="custom-control custom-radio col-md-6 mb-3">
+<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+<label class="custom-control-label" for="paypal"><img src="img/demo/paypal.png" alt /></label>
+</div>
+<div class="custom-control custom-radio col-md-6 mb-3">
+<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+<label class="custom-control-label" for="credit"><img src="img/demo/card.png" alt /></label>
+</div>
+</div>
+<br>
+<div class="row with-enic-padding-twni">
+<div class="col-md-12 mb-3">
+<label for="cc-number">Credit card number</label>
+<input type="text" class="form-control" id="cc-number" placeholder required>
+</div>
+</div>
+<div class="row with-enic-padding-twni">
+<div class="col-md-4 mb-3">
+<label for="cc-expiration">Expiration</label>
+<input type="text" class="form-control" id="cc-expiration" placeholder required>
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-3 mb-3">
+<label for="cc-expiration">CVV</label>
+<input type="text" class="form-control" id="cc-cvv" placeholder required>
+</div>
+</div>
+</form>
+</div>
+
+</div>
+
+<div class="tree-steps-hosting-plans-footer text-center">
+
+<a id="second-plan-hosting-steps" class="tree-steps-hosting-plans-footer-btn first-step-hosting">
+
+<span class="first-step-hosting-text">
+<small>next step</small>
+<i class="fas fa-angle-right"></i>
+</span>
+
+
+<span class="second-step-hosting-text">
+checkout
+</span>
+
+</a>
+</div>
+
+</div>
+</div>
+
+<div class="col-md-4">
+
+<div class="tree-steps-hosting-plans third">
+<div class="tree-steps-hosting-plans-header">
+<i class="fas fa-fire tree-steps-hosting-plans-icon"></i>
+<h5 class="tree-steps-hosting-plans-title">entreprise plan <small>for big projects</small></h5>
+
+<span class="tree-steps-hosting-plans-price monthly">
+<b class="monthly">$19<small>/month</small></b>
+<b class="yearly">$199<small>/year</small></b>
+</span>
+
+</div>
+<div id="third-plan-hosting-steps-content" class="tree-steps-hosting-plans-body">
+
+<div class="loader-tree-steps-hosting-plans-body">
+
+<i class="fas fa-circle-notch rotate360icon"></i>
+</div>
+
+<ul class="tree-steps-hosting-plans-list">
+
+<li class="checked">2 TB of space</li>
+<li class="checked">unlimited bandwidth</li>
+<li class="checked">full backup systems</li>
+<li class="checked">free domain</li>
+<li class="checked">unlimited database</li>
+<li class="checked">live chat support</li>
+<li class="checked">phone support</li>
+</ul>
+
+<div class="tree-steps-hosting-plans-payment">
+
+
+<span id="third-plan-hosting" data-toggle="tooltip" data-placement="bottom" title="previous step" class="tree-steps-hosting-plans-footer-btn-back step-two-hosting">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+
+<h5 class="tree-steps-hosting-plans-payment-title">error <small>this offre was ended </small></h5>
+<div class="tree-steps-hosting-plans-error">
+<i class="far fa-times-circle"></i>
+<p>we are sorry, this offre was ended </p>
+</div>
+</div>
+
+</div>
+
+<div class="tree-steps-hosting-plans-footer text-center">
+
+<a id="third-plan-hosting-steps" class="tree-steps-hosting-plans-footer-btn first-step-hosting">
+
+<span class="first-step-hosting-text">
+<small>next step</small>
+<i class="fas fa-angle-right"></i>
+</span>
+
+
+<span class="second-step-hosting-text">
+contact us
+</span>
+
+</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="row mr-tp-70">
+<div class="col-md-4 reseller-hosting-features">
+<a href="#">
+<div class="reseller-hosting-features-icon">
+<i class="fas fa-dollar-sign"></i>
+</div>
+<div class="reseller-hosting-features-comments">
+<span class="reseller-hosting-features-title">30days money back</span>
+<span class="reseller-hosting-features-text">is simply dummy text of the printing </span>
+</div>
+</a>
+</div>
+<div class="col-md-4 reseller-hosting-features">
+<a href="#">
+<div class="reseller-hosting-features-icon">
+<i class="fas fa-check"></i>
+</div>
+<div class="reseller-hosting-features-comments">
+<span class="reseller-hosting-features-title">secure payment transaction</span>
+<span class="reseller-hosting-features-text">is simply dummy text of the printing </span>
+</div>
+</a>
+</div>
+<div class="col-md-4 reseller-hosting-features">
+<a href="#">
+<div class="reseller-hosting-features-icon">
+<i class="far fa-life-ring"></i>
+</div>
+<div class="reseller-hosting-features-comments">
+<span class="reseller-hosting-features-title">fast support responding</span>
+<span class="reseller-hosting-features-text">is simply dummy text of the printing </span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="padding-80-0-30 white-gray-border-top">
+<div class="container">
+<div class="tittle-simple-one"><h5>getting things done<span>is simply dummy text of the printing is simply dummy,<br> is simply dummy text of the printing.</span></h5></div>
+<ul class="nav justify-content-center mr-tp-70 resslers-features-tabs" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="Applications-tab" data-toggle="tab" href="#Applications" role="tab" aria-controls="Applications" aria-selected="true">Hosting Applications</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="Features-tab" data-toggle="tab" href="#Features" role="tab" aria-controls="Features" aria-selected="false">Main Hosting Features</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="Control-tab" data-toggle="tab" href="#Control" role="tab" aria-controls="Control" aria-selected="false">Our Hosting Control Panel</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="Support-tab" data-toggle="tab" href="#Support" role="tab" aria-controls="Support" aria-selected="false">Hosting Support</a>
+</li>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="Applications" role="tabpanel" aria-labelledby="Applications-tab">
+<div class="row justify-content-center text-left">
+<div class="col-md-10 resslers-tabs-content-with-image">
+<img src="img/demo/phone-screen.png" alt />
+<div class="resslers-tabs-content-with-image-text">
+<h5>23 new application added to your plan<br> for free <span>is simply dummy text of the printing is simply dummy is simply dummy text of the printing is simply dummy</span></h5>
+<ul>
+<li>is simply dummy</li>
+<li>text of the printing</li>
+<li>typesetting </li>
+<li>industry</li>
+<li>Lorem Ipsum</li>
+<li>is simply dummy</li>
+<li>text of the printing</li>
+<li>typesetting </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="Features" role="tabpanel" aria-labelledby="Features-tab">
+<div class="row justify-content-center text-left">
+<div class="col-md-10 resslers-tabs-content-with-image">
+<div class="resslers-tabs-content-with-image-text">
+<h5>23 new application added to your plan<br> for free <span>is simply dummy text of the printing is simply dummy is simply dummy text of the printing is simply dummy</span></h5>
+<ul>
+<li>is simply dummy</li>
+<li>text of the printing</li>
+<li>typesetting </li>
+<li>industry</li>
+<li>Lorem Ipsum</li>
+<li>is simply dummy</li>
+<li>text of the printing</li>
+<li>typesetting </li>
+</ul>
+</div>
+<img src="img/demo/phone-screen-2.png" alt />
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="Control" role="tabpanel" aria-labelledby="Control-tab">
+<div class="row justify-content-center">
+<div class="col-md-10 resslers-tabs-content-with-image d-block">
+<div class="resslers-tabs-content-with-image-text text-center">
+<h5>23 new application added to your plan<br> for free <span>is simply dummy text of the printing is simply dummy is simply dummy text of the printing is simply dummy <br> is simply dummy text of the printing is simply dummy is simply dummy </span></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="Support" role="tabpanel" aria-labelledby="Support-tab">
+<div class="row justify-content-center">
+<div class="col-md-10 resslers-tabs-content-with-image d-block">
+<div class="resslers-tabs-content-with-image-text text-center">
+<h5>23 new application added to your plan<br> for free <span>is simply dummy text of the printing is simply dummy is simply dummy text of the printing is simply dummy <br> is simply dummy text of the printing is simply dummy is simply dummy </span></h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="our-pertners">
+<div class="container">
+<h2 class="d-none">our pertners</h2>
+<div class="owl-carousel pertners-carousel owl-theme">
+<div class="item">
+<a href="#"> <img src="img/pertners/logo1.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo2.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo3.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo4.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo5.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo1.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo2.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo3.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo4.png" alt /> </a>
+</div>
+<div class="item">
+<a href="#"> <img src="img/pertners/logo5.png" alt /> </a>
+</div>
+</div>
+</div>
+</section>
+<section class="padding-90-0-100 gray-background position-relative overflow-hidden">
+<span class="section-with-moon-back-under"></span>
+<span class="section-with-moon-men-quastions-under"></span>
+<div class="container">
+<div class="tittle-simple-one"><h5>Frequently asked questions<span>is simply dummy text of the printing is simply dummy,<br> is simply dummy text of the printing.</span></h5></div>
+<div class="row justify-content-left mr-tp-90">
+<div class="col-md-6">
+<div class="nuhost-filter-container"> 
+<i class="fas fa-search"></i>
+<input type="text" id="nuhost-filter-input" onkeyup="if (!window.__cfRLUnblockHandlers) return false; FilterListSection()" placeholder="Search for quastions here.." data-cf-modified-09f5bc71cdc5ff6dddfadeb0-> 
+</div>
+<div class="nuhost-filter-list-container"> 
+<div class="filter-content-box" id="go-to-qst-01-content"> 
+<span class="filter-content-close" data-toggle="tooltip" data-placement="bottom" data-original-title="close">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+<h5>how can i order new host ?</h5>
+<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div> 
+<div class="filter-content-box" id="go-to-qst-02-content"> 
+<span class="filter-content-close" data-toggle="tooltip" data-placement="bottom" data-original-title="close">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+<h5>what is resellers hosting ?</h5>
+<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div> 
+<div class="filter-content-box" id="go-to-qst-03-content"> 
+<span class="filter-content-close" data-toggle="tooltip" data-placement="bottom" data-original-title="close">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+<h5>what is resellers hosting ?</h5>
+<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div> 
+<div class="filter-content-box" id="go-to-qst-04-content"> 
+<span class="filter-content-close" data-toggle="tooltip" data-placement="bottom" data-original-title="close">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+<h5>what is resellers hosting ?</h5>
+<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div> 
+<div class="filter-content-box" id="go-to-qst-05-content"> 
+<span class="filter-content-close" data-toggle="tooltip" data-placement="bottom" data-original-title="close">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+<h5>what is resellers hosting ?</h5>
+<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div> 
+<div class="filter-content-box" id="go-to-qst-06-content"> 
+<span class="filter-content-close" data-toggle="tooltip" data-placement="bottom" data-original-title="close">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+<h5>what is resellers hosting ?</h5>
+<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div> 
+<div class="filter-content-box" id="go-to-qst-07-content"> 
+<span class="filter-content-close" data-toggle="tooltip" data-placement="bottom" data-original-title="close">
+<span class="first-stright"></span>
+<span class="second-stright"></span>
+</span>
+<h5>what is resellers hosting ?</h5>
+<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div> 
+<ul id="nuhost-filter-list"> 
+<li><a id="go-to-qst-01">how can i order new host ? <i class="fas fa-angle-right"></i></a></li> 
+<li><a id="go-to-qst-02">what is resellers hosting ? <i class="fas fa-angle-right"></i></a></li> 
+<li><a id="go-to-qst-03">i want new domain name <i class="fas fa-angle-right"></i></a></li> 
+<li><a id="go-to-qst-04">can i pay with paypal ? <i class="fas fa-angle-right"></i></a></li> 
+<li><a id="go-to-qst-05">are this site secure ? <i class="fas fa-angle-right"></i></a></li> 
+<li><a id="go-to-qst-06">i want WordPress site <i class="fas fa-angle-right"></i></a></li> 
+<li><a id="go-to-qst-07">I want to know how i can contact you <i class="fas fa-angle-right"></i></a></li> 
+</ul> 
+</div> 
+</div>
+</div>
+</div>
+</section>
+<section class="footer-coodiv-thm">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-4">
+<a class="footer-brand" href="#">
+<img src="img/header/logo.png" alt>
+</a>
+<a class="footer-contact-a-hm"><i class="fas fa-life-ring"></i> 00213-123-45-67-89</a> 
+<a class="footer-contact-a-hm"><i class="fas fa-microphone"></i> <span class="__cf_email__" data-cfemail="8ffcfaffffe0fdfbcfece0e0ebe6f9a1e1eafb">[email&#160;protected]</span></a> 
+<a class="footer-contact-a-hm"><i class="fas fa-map-marker-alt"></i> 28 Green Tower, Central City , New York City, USA</a> 
+</div>
+<div class="col-md-2 quiq-links-footer-mb-st">
+<h5 class="footer-title-simple">Quick Links</h5>
+<ul class="main-menu-footer-mn">
+<li><a href="index.html">homepage</a></li>
+<li><a href="about-us.html">about us</a></li>
+<li><a href="domain-search.html">domains</a></li>
+<li><a href="reseller-hosting.html">reseller hosting</a></li>
+<li><a href="web-hosting.html">web-hosting</a></li>
+</ul>
+</div>
+<div class="col-md-2 quiq-links-footer-mb-st">
+<h5 class="footer-title-simple">About Us</h5>
+<ul class="main-menu-footer-mn">
+<li><a href="knowledgebase.html">knowledgebase</a></li>
+<li><a href="help-center.html">help-center</a></li>
+<li><a href="404.html">404 page</a></li>
+<li><a href="blog.html">blog</a></li>
+<li><a href="contact.html">contact</a></li>
+</ul>
+</div>
+<div class="col-md-3 stay-in-tch-footer-mb-st">
+<h5 class="footer-title-simple">Stay In Touch</h5>
+<form class="form-contain-home-subscribe">
+<input type="email" id="email-subscribe" name="email-subscribe" placeholder="entre your email please" required>
+<button type="submit"><i class="fas fa-paper-plane"></i></button>
+</form>
+<div class="footer-social-links">
+<a class="facebookcc" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="twittercc" href="#"><i class="fab fa-twitter"></i></a>
+<a class="googlecc" href="#"><i class="fab fa-google-plus-g"></i></a>
+<a class="dribbblecc" href="#"><i class="fab fa-dribbble"></i></a>
+</div>
+<p class="copyright-footer-p">© 2018 Coodiv. Made with Love in Algeria.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/popper.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/bootstrap.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/waypoints.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/jquery.counterup.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/particles-code.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/typed.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/smoothscroll.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="owlcarousel/owl.carousel.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/parallax.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/bootstrap.offcanvas.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/flickity.pkgd.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/scripts.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/mailer.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/jquery.touchSwipe.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/jquery.countdown.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/modal-video.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/particles.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/mixitup.min.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="js/video-bg.js" type="09f5bc71cdc5ff6dddfadeb0-text/javascript"></script>
+
+<script src="../../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="09f5bc71cdc5ff6dddfadeb0-|49" defer></script><script>(function(){var js = "window['__CF$cv$params']={r:'7e63793d79b10fca',m:'gdz7o8p9SJUizWUVSExnndPivVySrusy7AWAEcdHkKw-1689271731-0-AXhrwNIMUty2A96isXTYasXKyQ+kN7yf+wOgrLTTFCKG'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../../cdn-cgi/challenge-platform/h/g/scripts/jsd/f5fedcf7/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+
+<!-- Mirrored from demo.coodiv.net/html/nuhost/html/web-hosting.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jul 2023 18:10:42 GMT -->
+</html>
