@@ -28,7 +28,7 @@ class PaypalPaymentController extends Controller
                         "currency_code"=> "USD",
                         "value"=> env('PAYPAL_AMOUNT')
                     ],
-                     'description' => 'Amazon Ad 6 Month One Time Setup Cost'
+                     'description' => 'Web Hosting Premium Plan'
                 ]
             ],
             
