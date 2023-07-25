@@ -24,11 +24,10 @@ class LoginRegistrationController extends Controller
    
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                        ->withSuccess('Signed in');
+            return redirect()->intended('dashboard')->withSuccess('Signed in');
         }
   
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("login")->withError('Login details are not valid');
     }
 
     public function registration()
@@ -39,25 +38,30 @@ class LoginRegistrationController extends Controller
     public function validateRegistration(Request $request)
     {  
         $request->validate([
-            'name' => 'required',
+            'firstname' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
-           
-        $data = $request->all();
-        $check = $this->create($data);
-         
-        return redirect("dashboard")->withSuccess('You have signed-in');
-    }
+        
+        try {
+            
+            User::create([
+                'firstname' => $request->input('firstname'),
+                'email' => $request->input('email'),
+                'password' => Hash::make($request->input('password'))
+            ]);
 
-    public function create(array $data)
-    {
-      return User::create([
-        'name' => $data['name'],
-        'email' => $data['email'],
-        'password' => Hash::make($data['password'])
-      ]);
-    }    
+            return redirect("login")->withSuccess('Congratulations, your account has been successfully created.Please Login.');
+
+        } catch (\Exception $e) {
+
+            toastr()->error($e->getMessage());
+            return redirect("login");
+        }
+        
+        
+    }
+  
     
     public function dashboard()
     {
@@ -65,7 +69,7 @@ class LoginRegistrationController extends Controller
             return view('dashboard');
         }
   
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return redirect("login")->withError('Please login and try again.');
     }
     
     public function signOut() {

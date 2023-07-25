@@ -144,21 +144,7 @@
     var e=window.event||e;
     $(".closesrch-her-block").addClass("np-dsp-block");
 	$(".search-header-block").removeClass("show-block");
-    });
-	
-	
-	// header resize//
-	function resize()
-    {
-    var heights = window.innerHeight;
-    document.getElementById("header").style.height = heights + "px";
-    }
-    resize();
-    window.onresize = function() {
-    resize();
-    }; 
-
-	
+    });	
 	
 	// header text change//
 	$(function(){

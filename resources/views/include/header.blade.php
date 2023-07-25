@@ -60,19 +60,19 @@
                </ul>
                <ul class="top-nav">
                   <li>
-                     <a href="#" class="choose-language whmcs-top-header-coodiv-link" data-toggle="popover" id="languageChooser">
+                     <a href="javascript:void(0)" class="choose-language whmcs-top-header-coodiv-link" data-toggle="popover" id="languageChooser">
                      <i class="bredhicon-location-inv"></i>
                      <span>English</span>
                      </a>
                   </li>
                   <li>
-                     <a class="whmcs-top-header-coodiv-link" title="Register" href="register.html">
+                     <a class="whmcs-top-header-coodiv-link" title="Register" href="{{URL('registration')}}">
                      <i class="bredhicon-lock-empty"></i>
                      <span>Register</span>
                      </a>
                   </li>
                   <li>
-                     <a class="whmcs-top-header-coodiv-link" href="cart14c8.html?a=view">
+                     <a class="whmcs-top-header-coodiv-link" href="{{URL('cart')}}">
                      <i class="bredhicon-box"></i>
                      <span>View Cart</span>
                      </a>
@@ -98,20 +98,20 @@
                      </li>
                      
                      <li data-username="announcements" class="nav-item">
-                        <a href="index992c.html" class="nav-link ">Domains</a>
+                        <a href="{{URL('domain-search')}}" class="nav-link ">Domains</a>
                      </li>
                      <li data-username="contact" class="nav-item">
-                        <a href="contact.html" class="nav-link ">Contact Us</a>
+                        <a href="{{URL('contact-us')}}" class="nav-link ">Contact Us</a>
                      </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link" role="button" id="webhosting-megamenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{{URL('web-hosting')}}">Hosting <span class="nav-new-tag">New</span></a>
                         <div class="dropdown-menu coodiv-dropdown-header web-menu" aria-labelledby="webhosting-megamenu">
                            <ul class="web-hosting-menu-header">
                               <li><i class="fas fa-server"></i> <a href="{{URL('web-hosting-starter')}}">Web Hosting <span>Lorem ipsum dolor sit amet</span></a></li>
-                              <li><i class="fab fa-squarespace"></i> <a href="dedicated.html">Web Hosting Plus <span>Lorem ipsum dolor sit amet</span></a></li>
-                              <li><i class="fas fa-server"></i> <a href="games.html">Web Hosting Pro <span>Lorem ipsum dolor sit amet</span></a></li>
-                              <li><i class="fab fa-squarespace"></i> <a href="servers.html">Reseller Hosting <span>Lorem ipsum dolor sit amet</span></a></li>
-                              <li><i class="fas fa-cloud"></i> <a href="cpanel.html">Cloud VPS <span>Lorem ipsum dolor sit amet</span></a></li>
+                              <li><i class="fab fa-squarespace"></i> <a href="{{URL('web-hosting-plus')}}">Web Hosting Plus <span>Lorem ipsum dolor sit amet</span></a></li>
+                              <li><i class="fas fa-server"></i> <a href="{{URL('web-hosting-pro')}}">Web Hosting Pro <span>Lorem ipsum dolor sit amet</span></a></li>
+                              <li><i class="fab fa-squarespace"></i> <a href="javascript:void(0)">Reseller Hosting <span>Lorem ipsum dolor sit amet</span></a></li>
+                              <li><i class="fas fa-cloud"></i> <a href="javascript:void(0)">Cloud VPS <span>Lorem ipsum dolor sit amet</span></a></li>
                            </ul>
                         </div>
                      </li>
@@ -119,19 +119,25 @@
                </div>
                <ul class="header-user-info-coodiv">
                   <li class="dropdown">
-                     <a role="button" id="header-login-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                     <a role="button" id="header-login-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{{URL('login')}}">
                      Login
                      </a> <span>12365-8448</span>
                      <div class="dropdown-menu coodiv-dropdown-header user-login-dropdown " aria-labelledby="header-login-dropdown">
-                        <form class="user-login-dropdown-form" method="post" action="https://demo.coodiv.net/dologin.php">
-                           <input type="hidden" name="token" value="9556054f3b5a6e310d92c298e5d894f1927ecd20" />
+                        <form class="user-login-dropdown-form" method="post" action="{{URL('validate-login')}}">
+                           @csrf
                            <div class="form-group username">
-                              <input type="email" name="username" id="inputEmail" placeholder="Enter email" class="form-control" autofocus>
+                              <input type="email" name="email" id="inputEmail" placeholder="Enter email" class="form-control" autofocus>
                               <i class="fas fa-at"></i>
+                              @if($errors->has('email'))
+                                 <div class="error" style="color: red">{{ $errors->first('email') }}</div>
+                              @endif
                            </div>
                            <div class="form-group password">
                               <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" autocomplete="off">
                               <i class="fas fa-lock"></i>
+                              @if($errors->has('password'))
+                              <div class="error" style="color: red">{{ $errors->first('password') }}</div>
+                              @endif
                            </div>
                            <button data-toggle="tooltip" data-placement="left" title="Login" class="user-login-dropdown-form-button" type="submit"><i class="fas fa-angle-right"></i></button>
                         </form>

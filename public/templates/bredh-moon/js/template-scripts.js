@@ -2,6 +2,13 @@
  * coodiv team
  -------------------------------------------------------------------*/
 	// display on hover box //
+	$(function(){
+		$("#typed").typed({
+			strings: ["₹29/month. ", "₹39/month. ","₹49/month. ","₹29/month. "],
+			typeSpeed: 90,
+			loop:true,
+		});
+	});
 	$(".display-on-hover-box-container a.display-on-hover-box-items").on("mouseenter",function() {
 		$(".tab-content-hover").hide();
 		$(".display-on-hover-box-container a.display-on-hover-box-items").removeClass('ctive-clod-sr');					

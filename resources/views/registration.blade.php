@@ -39,89 +39,92 @@
          </div>
          <div class="kt-grid">
             <div class="item-middle">
-               <h3 class="login-title">Ласкаво просимо до панелі керування.</h3>
-               <span class="login-subtitle">Ви повинні авторизуватися для доступу до даної сторінки.</span>
+               <h3 class="login-title">Welcome to our Support Portal.</h3>
             </div>
             <div class="item-footer">
                <div class="login-info">
-                  <div class="login-copyright">© 2023, Company Name</div>
+                  <div class="login-copyright">© 2023, {{env('APP_NAME')}}</div>
                   <div class="login-menu">
-                     <a href="indexded0.html" class="kt-link">Knowledgebase</a>
-                     <a href="contact.html" class="kt-link">Contact</a>
+                     <a href="{{URL('our-service')}}" class="kt-link">Our Service</a>
+<a href="{{URL('contact-us')}}" class="kt-link">Contact</a>
                   </div>
                </div>
             </div>
          </div>
       </div>
       <div class="login-right-side-custom">
-         <div class="login-head"><span>Вже зареєстровані?</span> <a href="index804a.html">Вхід</a></div>
+         <div class="login-head"><span>Already Registered?</span> <a href="{{URL('login')}}">Login</a></div>
          <div class="login-wrapper">
             <div class="login-form-container register-special">
                <h5 class="login-title">Sign Up</h5>
+               @if ($errors->any())
+               @foreach ($errors->all() as $error)
+                  <div class="alert alert-danger">{{$error}}</div>
+               @endforeach
+               @endif
                <div id="registration">
-                  <form method="post" class="using-password-strength" action="https://demo.coodiv.net/register.php" role="form" name="orderfrm" id="frmCheckout">
-                     <input type="hidden" name="token" value="9556054f3b5a6e310d92c298e5d894f1927ecd20" />
-                     <input type="hidden" name="register" value="true" />
+                  <form method="post" class="using-password-strength" action="{{URL('validate-registration')}}" role="form" name="orderfrm" id="frmCheckout">
+                     @csrf
                      <div id="containerNewUserSignup">
                         <div class="sub-heading">
-                           <span>Персональні дані</span>
+                           <span>Personal Information</span>
                         </div>
                         <div class="row">
                            <div class="col-sm-6">
                               <div class="form-group">
-                                 <input type="text" name="firstname" id="inputFirstName" class="field form-control" placeholder="Ім'я" value required autofocus>
+                                 <input type="text" name="firstname" id="inputFirstName" class="field form-control" placeholder="First Name" value required autofocus>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group">
-                                 <input type="text" name="lastname" id="inputLastName" class="field form-control" placeholder="Прізвище" value required>
+                                 <input type="text" name="lastname" id="inputLastName" class="field form-control" placeholder="Last Name" value required>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group">
-                                 <input type="email" name="email" id="inputEmail" class="field form-control" placeholder="Email-адреса" value>
+                                 <input type="email" name="email" id="inputEmail" class="field form-control" placeholder="Email-address" value>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group">
-                                 <input type="tel" name="phonenumber" id="inputPhone" class="field" placeholder="Телефон" value>
+                                 <input type="tel" name="phonenumber" id="inputPhone" class="field" placeholder="Phone Number" value>
                               </div>
                            </div>
                         </div>
                         <div class="sub-heading">
-                           <span>Платіжна адреса</span>
+                           <span>Billing Address</span>
                         </div>
                         <div class="row">
                            <div class="col-sm-12">
                               <div class="form-group">
-                                 <input type="text" name="companyname" id="inputCompanyName" class="field" placeholder="Компанія (Опціонально)" value>
+                                 <input type="text" name="companyname" id="inputCompanyName" class="field" placeholder="Company Name (Optional)" value>
                               </div>
                            </div>
                            <div class="col-sm-12">
                               <div class="form-group">
-                                 <input type="text" name="address1" id="inputAddress1" class="field form-control" placeholder="Вулиця, адреса" value required>
+                                 <input type="text" name="address1" id="inputAddress1" class="field form-control" placeholder="Street Address" value required>
                               </div>
                            </div>
                            <div class="col-sm-12">
                               <div class="form-group">
-                                 <input type="text" name="address2" id="inputAddress2" class="field" placeholder="Вулиця, адреса 2" value>
+                                 <input type="text" name="address2" id="inputAddress2" class="field" placeholder="Street Address 2" value>
                               </div>
                            </div>
                         </div>
                         <div class="row">
                            <div class="col-sm-4">
                               <div class="form-group">
-                                 <input type="text" name="city" id="inputCity" class="field form-control" placeholder="Місто" value required>
+                                 <input type="text" name="city" id="inputCity" class="field form-control" placeholder="City" value required>
                               </div>
                            </div>
                            <div class="col-sm-5">
                               <div class="form-group">
-                                 <input type="text" name="state" id="state" class="field form-control" placeholder="Район/область/штат" value required>
+                                 <input type="text" name="state" id="state" class="field form-control" placeholder="State" value required>
                               </div>
                            </div>
                            <div class="col-sm-3">
                               <div class="form-group">
-                                 <input type="text" name="postcode" id="inputPostcode" class="field form-control" placeholder="Поштовий індекс" value required>
+                                 <input type="text" name="postcode" id="inputPostcode" class="field form-control" placeholder="Postcode" value required>
                               </div>
                            </div>
                         </div>
@@ -880,18 +883,18 @@
                      </div>
                      <div id="containerNewUserSecurity">
                         <div class="sub-heading">
-                           <span>Безпека акаунту</span>
+                           <span>Account Security</span>
                         </div>
                         <div id="containerPassword" class="row">
                            <div id="passwdFeedback" style="display: none;" class="alert alert-info text-center col-sm-12"></div>
                            <div class="col-sm-6">
                               <div class="form-group">
-                                 <input type="password" name="password" id="inputNewPassword1" data-error-threshold="50" data-warning-threshold="75" class="field" placeholder="Пароль" autocomplete="off">
+                                 <input type="password" name="password" id="inputNewPassword1" data-error-threshold="50" data-warning-threshold="75" class="field" placeholder="Password" autocomplete="off">
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group">
-                                 <input type="password" name="password2" id="inputNewPassword2" class="field" placeholder="Підтвердіть пароль" autocomplete="off">
+                                 <input type="password" name="password2" id="inputNewPassword2" class="field" placeholder="Confirm Password" autocomplete="off">
                               </div>
                            </div>
                            <div class="col-sm-6" style="margin-bottom: 13px;">
@@ -904,7 +907,7 @@
                      <div class="marketing-email-optin">
                         <h4>Join our mailing list</h4>
                         <p>We would like to send you occasional news, information and special offers by email. Choose below whether you want to join our mailing list. You can unsubscribe at any time.</p>
-                        <input type="checkbox" name="marketingoptin" value="1" checked class="no-icheck toggle-switch-success" data-size="small" data-on-text="Так" data-off-text="Ні">
+                        <input type="checkbox" name="marketingoptin" value="1" checked class="no-icheck toggle-switch-success" data-size="small" data-on-text="Yes" data-off-text="No">
                      </div>
                      <br/>
                      <p align="center">

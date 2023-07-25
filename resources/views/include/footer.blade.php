@@ -3,7 +3,7 @@
       <div class="row free-trial-footer-banner">
          <div class="col-md-8">
             <h5 class="free-trial-footer-banner-title">join now and have free month of deluxe hosting</h5>
-            <p class="free-trial-footer-banner-text">We offers a free month of service for new customers.* Sign up for your trial offer and instantly have deluxe hosting in your account with free domain included.</p>
+            <p class="free-trial-footer-banner-text">Razorhost is a web hosting and domain provider. we provide the lowest price web hosting, cloud hosting, reseller hosting & VPS hosting for every startup or established company to grow their business with our hosting.</p>
          </div>
          <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
             <div class="mb-auto"></div>
@@ -179,6 +179,8 @@
    <script src="{{URL::asset('templates/bredh-moon/js/particles-code.js')}}" type="text/javascript"></script>
    <script src="{{URL::asset('templates/bredh-moon/js/particles.js')}}" type="text/javascript"></script>
    <script src="{{URL::asset('templates/bredh-moon/js/smoothscroll.js')}}" type="text/javascript"></script>
+   <script src="{{URL::asset('templates/bredh-moon/js/typed.js')}}" type="text/javascript"></script>
+   
    @yield('javascript')
 
    <script type="text/javascript">

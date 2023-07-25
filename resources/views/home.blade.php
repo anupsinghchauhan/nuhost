@@ -4,20 +4,16 @@
 <main class="container mb-auto mt-auto">
    <div class="carousel carousel-main">
       <div class="carousel-cell">
-         <h3 class="mt-3 main-header-text-title"><span>Begin the search for your perfect domain name...</span>Register Domain</h3>
-         <div style="margin: 0;" class="row">
-            <form method="post" action="https://demo.coodiv.net/domainchecker.php" id="domain-search-header" class="col-md-push-2 col-md-8">
-               <input type="hidden" name="token" value="9556054f3b5a6e310d92c298e5d894f1927ecd20" />
-               <input type="hidden" name="transfer" />
-               <i class="fas fa-globe"></i>
-               <input type="text" placeholder="Find your new domain name" id="btnTransfer" placeholder="eg. example.com" autocapitalize="none" data-toggle="tooltip" data-placement="left" data-trigger="manual" title="Required">
-               <span class="inline-button-domain-order">
-               <button data-toggle="tooltip" data-placement="left" title="Transfer" id="transfer-btn" type="submit" name="transfer" value="Transfer"><i class="fas fa-undo"></i></button>
-               <button data-toggle="tooltip" data-placement="left" title="Search" id="search-btn" type="submit" value="Search"><i class="fas fa-search"></i></button>
-               </span>
-            </form>
-         </div>
-         <span class="col-md-push-2 col-md-8 domain-search-header-pricetext">Starting at <b>$0.99/Year</b></span>
+         <h3 class="mt-3 main-header-text-title">
+            Web Hosting<br/> From <span id="typed"></span>
+            <div>
+            <p>Begin the search for low cost perfect domain hosting...</p>
+            <p> Improved page loads and SEO</p>
+            <p> Free domain, email and support included</p>
+            <p> 30-day money back guarantee</p>
+            </div>
+         </h3>
+         
       </div>
    </div>
 </main>
@@ -30,8 +26,8 @@
          <div class="col-md-3">
             <div class="futures-version-2-box">
                <i class="bredhicon-share"></i>
-               <h5>Buy A Domain</h5>
-               <p>Below you can configure the domain names in your shopping cart selecting the addon services you would like, providing required information for them and defining the nameservers that they will use.</p>
+               <h5>LiteSpeed Web Server</h5>
+               <p>We are Using LiteSpeed Technology to Speed Up your Websites.</p>
                <div class="text-right">
                   <a class="more-btn" href="cart2029.html">Register</a>
                </div>
@@ -50,8 +46,8 @@
          <div class="col-md-3">
             <div class="futures-version-2-box">
                <i class="bredhicon-flash"></i>
-               <h5>Make Payment</h5>
-               <p>Below is a summary of the selected invoices and the total due to pay all of them. To submit payment please just choose your desired payment method below and then submit.</p>
+               <h5>Safe and Secured</h5>
+               <p>Below is a summary of the selected invoices and the total due to pay all of them.Our team assured your web site is always safe and secure.</p>
                <div class="text-right">
                   <a class="more-btn" href="index804a.html">Pay Now</a>
                </div>
@@ -62,7 +58,7 @@
                <span class="free-badge"><b></b>Free</span>
                <i class="bredhicon-mic"></i>
                <h5>Get Support</h5>
-               <p>Our dedication to customer support reaches across the globe as well. We are here to help you with your hosting in any way possible, and you can reach us via phone, email, or live chat.</p>
+               <p>Our dedication to customer support reaches across the globe as well. We are here to help you with your hosting in any way possible, and you can reach us email, or live chat.</p>
                <div class="text-right">
                   <a class="more-btn" href="submitticket.html">Support Tickets</a>
                </div>
@@ -85,51 +81,66 @@
       <div class="row justify-content-start second-pricing-table-container mr-tp-30">
          <div class="col-md-4">
             <div class="second-pricing-table">
-               <h5 class="second-pricing-table-title">Basic plan <span>mostly for personal using</span></h5>
+               <h5 class="second-pricing-table-title">Basic plan <span>Best for One Website</span></h5>
                <span class="second-pricing-table-price monthly">
-               <i class="monthly">$299.99<small>/mo</small></i>
-               <i class="yearly">$799.99<small>/year</small></i>
+               <i class="monthly">{{env('basic_month_plan')}}<small>/mo</small></i>
+               <i class="yearly">{{env('basic_year_plan')}}<small>/year</small></i>
                </span>
                <ul class="second-pricing-table-body">
-                  <li>2 TB of space</li>
-                  <li>unlimited bandwidth</li>
-                  <li>full backup systems</li>
-                  <li>free domain</li>
+                  <li>1 Website</li>
+                  <li>Unlimited NVMe SSD Space</li>
+                  <li>Unlimited bandwidth</li>
+                  <li>Unlimited Email Account(s)</li>
+                  <li>Cpanel</li>
+                  <li>SSL Certificate</li>
+                  <li>WordPress 1-Click Install</li>
+                  <li>Unlimited Subdomain</li>
                   <li class="not-chacked">unlimited database</li>
+                  <li class="not-chacked">SSH/Terminal</li>
                </ul>
                <a class="second-pricing-table-button" href="#">next setup</a>
             </div>
          </div>
          <div class="col-md-4">
             <div class="second-pricing-table">
-               <h5 class="second-pricing-table-title">Expert plan <span>mostly for personal using</span></h5>
+               <h5 class="second-pricing-table-title">Expert plan <span>Best for Two Website</span></h5>
                <span class="second-pricing-table-price monthly">
-               <i class="monthly">$399.99<small>/mo</small></i>
-               <i class="yearly">$899.99<small>/year</small></i>
+               <i class="monthly">{{env('plus_month_plan')}}<small>/mo</small></i>
+               <i class="yearly">{{env('plus_year_plan')}}<small>/year</small></i>
                </span>
                <ul class="second-pricing-table-body">
-                  <li>2 TB of space</li>
-                  <li>unlimited bandwidth</li>
-                  <li>full backup systems</li>
-                  <li>free domain</li>
+                  <li>2 Website</li>
+                  <li>Unlimited NVMe SSD Space</li>
+                  <li>Unlimited bandwidth</li>
+                  <li>Unlimited Email Account(s)</li>
+                  <li>Cpanel</li>
+                  <li>SSL Certificate</li>
+                  <li>WordPress 1-Click Install</li>
+                  <li>Unlimited Subdomain</li>
                   <li class="not-chacked">unlimited database</li>
+                  <li class="not-chacked">SSH/Terminal</li>
                </ul>
                <a class="second-pricing-table-button" href="#">next setup</a>
             </div>
          </div>
          <div class="col-md-4">
             <div class="second-pricing-table style-2 active">
-               <h5 class="second-pricing-table-title">Relluxe plan <span>mostly for personal using</span></h5>
+               <h5 class="second-pricing-table-title">Relluxe plan <span>Best for Unlimited Website</span></h5>
                <span class="second-pricing-table-price monthly">
-               <i class="monthly">$499.99<small>/mo</small></i>
-               <i class="yearly">$999.99<small>/year</small></i>
+               <i class="monthly">{{env('pro_month_plan')}}<small>/mo</small></i>
+               <i class="yearly">{{env('pro_year_plan')}}<small>/year</small></i>
                </span>
                <ul class="second-pricing-table-body">
-                  <li>2 TB of space</li>
-                  <li>unlimited bandwidth</li>
-                  <li>full backup systems</li>
-                  <li>free domain</li>
+                  <li>Unlimited Website</li>
+                  <li>Unlimited NVMe SSD Space</li>
+                  <li>Unlimited bandwidth</li>
+                  <li>Unlimited Email Account(s)</li>
+                  <li>Cpanel</li>
+                  <li>SSL Certificate</li>
+                  <li>WordPress 1-Click Install</li>
+                  <li>Unlimited Subdomain</li>
                   <li>unlimited database</li>
+                  <li>SSH/Terminal</li>
                </ul>
                <a class="second-pricing-table-button" href="#">next setup</a>
             </div>
@@ -138,7 +149,7 @@
    </div>
 </section>
 <section class="our-pertners white-bg">
-   <div class="container">
+   <div class="container">      
       <h2 class="d-none">our pertners</h2>
       <div class="owl-carousel pertners-carousel owl-theme">
          <div class="item">
@@ -256,7 +267,7 @@
       </div>
    </div>
 </section>
-<section class="padding-100-0-50 position-relative white-bg">
+{{-- <section class="padding-100-0-50 position-relative white-bg">
    <div class="container">
       <div class="banner-servers-box">
          <div class="counter-placeholder"></div>
@@ -303,59 +314,59 @@
          <a class="btn jango-color-btn" href="#">create new account now</a>
       </div>
    </div>
-</section>
+</section> --}}
 <section class="padding-60-0-100 white-bg">
    <div class="container">
       <h5 class="title-default-coodiv-two">Simple & Powerful tools<span class="mr-tp-10">high performance 100% Intel CPU and 100% SSD bare metal platform.</span></h5>
       <div class="row justify-content-center mr-tp-40">
          <div class="col-md-3">
             <div class="box-features-one">
-               <i class="e-flaticon-002-plug"></i>
-               <h5>Stay connected all the time</h5>
+               <i class="h-flaticon-030-ssl-certificate"></i>
+               <h5>SSL Certificate</h5>
             </div>
          </div>
          <div class="col-md-3">
             <div class="box-features-one">
-               <i class="e-flaticon-025-router"></i>
-               <h5>Stay connected all the time</h5>
+               <i class="h-flaticon-028-servers-7"></i>
+               <h5>Litespeed Server</h5>
             </div>
          </div>
          <div class="col-md-3">
             <div class="box-features-one">
-               <i class="e-flaticon-043-remote-control"></i>
-               <h5>No noisy neighbors</h5>
+               <i class="h-flaticon-023-database-2"></i>
+               <h5>MySQL</h5>
             </div>
          </div>
          <div class="col-md-3">
             <div class="box-features-one">
                <i class="e-flaticon-021-virtual-reality"></i>
-               <h5>Powerful infrastructure</h5>
+               <h5>Imunify360</h5>
             </div>
          </div>
       </div>
       <div class="row justify-content-center mr-tp-10">
          <div class="col-md-3">
             <div class="box-features-one">
-               <i class="e-flaticon-004-battery"></i>
-               <h5>Many OS combinations</h5>
+               <i class="h-flaticon-026-web"></i>
+               <h5>Business Email</h5>
             </div>
          </div>
          <div class="col-md-3">
             <div class="box-features-one">
-               <i class="e-flaticon-032-sata"></i>
-               <h5>Root administrator access</h5>
+               <i class="h-flaticon-024-lifesaver-1"></i>
+               <h5>NVMe Storage</h5>
             </div>
          </div>
          <div class="col-md-3">
             <div class="box-features-one">
                <i class="e-flaticon-036-air-conditioner"></i>
-               <h5>No long term contracts</h5>
+               <h5>Website Builder</h5>
             </div>
          </div>
          <div class="col-md-3">
             <div class="box-features-one">
                <i class="e-flaticon-049-speaker"></i>
-               <h5>No noisy neighbors</h5>
+               <h5>Multiple PHP</h5>
             </div>
          </div>
       </div>
