@@ -169,7 +169,12 @@
       </div>
    </div>
 </form>
-
+{{-- com add to form  --}}
+<form action="{{ route('cart.add') }}" method="POST" id="add_to_cart">
+   @csrf
+   <input type="hidden" name="add_to_cart_product_name" id="add_to_cart_product_name" value="STANDARD">
+</form>
+{{-- com add to form  --}}
    <script src="{{URL::asset('templates/bredh-moon/js/template-scripts.js')}}" type="text/javascript"></script>
    <script src="{{URL::asset('templates/bredh-moon/js/flickity.pkgd.min.js')}}" type="text/javascript"></script>
    <script src="{{URL::asset('templates/bredh-moon/owlcarousel/owl.carousel.min.js')}}" type="text/javascript"></script>
@@ -195,8 +200,13 @@
                   jQuery('.row-product-selection').css('left','300px');
                   jQuery('#btnShowSidebar').html('<i class="fas fa-arrow-circle-left"></i> Hide Menu');
               }
-          });
+         });
       });
+      const addToCart = (product_name) => {
+         $("#add_to_cart_product_name").val(product_name);
+         $("#add_to_cart").submit();
+      }
+
    </script>
    </body>
 </html>

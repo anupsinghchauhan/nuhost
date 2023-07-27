@@ -24,6 +24,7 @@
    <script type="text/javascript">
     var ajaxURL="{{URL('/');}}";
     var orderCol=[];
+    
     </script>
     @yield('stylesheet')
       <style>

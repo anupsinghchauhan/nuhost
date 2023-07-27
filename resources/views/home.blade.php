@@ -67,124 +67,106 @@
       </div>
    </div>
 </section>
+
 <section class="padding-100-0 position-relative white-bg">
    <div class="container">
       <h5 class="title-default-coodiv-two">check out awesome plans, and order now <span class="mr-tp-20">chose which package is best for you.</span></h5>
-      <div class="row justify-content-center">
-         <div class="col-md-5 col-md-push-4">
-            <div id="monthly-yearly-chenge" class="mr-tp-40 style-two">
-               <a class="active monthly-price"> <span class="change-box-text">billed monthly</span> <span class="change-box"></span></a>
-               <a class="yearli-price"> <span class="change-box-text">billed annually</span></a>
-            </div>
-         </div>
-      </div>
-      <div class="row justify-content-start second-pricing-table-container mr-tp-30">
+      <div class="row justify-content-center first-pricing-table-container mr-tp-30">
          <div class="col-md-4">
-            <div class="second-pricing-table">
-               <h5 class="second-pricing-table-title">Basic plan <span>Best for One Website</span></h5>
-               <span class="second-pricing-table-price monthly">
-               <i class="monthly">{{env('basic_month_plan')}}<small>/mo</small></i>
-               <i class="yearly">{{env('basic_year_plan')}}<small>/year</small></i>
+            <div class="first-pricing-table">
+               <i style="font-family: 'Font Awesome 5 Free'" class="fas fa-rainbow first-pricing-table-icon"></i>
+               <h5 class="first-pricing-table-title">standard <span>Best for One Website</span></h5>
+               <span class="first-pricing-table-price monthly">
+               <i class="monthly">{!! $data['currency_symbol'] . $data['standard_price'] !!}<small>/mo</small></i>
                </span>
-               <ul class="second-pricing-table-body">
+
+               <ul class="first-pricing-table-body">
                   <li>1 Website</li>
-                  <li>Unlimited NVMe SSD Space</li>
-                  <li>Unlimited bandwidth</li>
-                  <li>Unlimited Email Account(s)</li>
-                  <li>Cpanel</li>
-                  <li>SSL Certificate</li>
-                  <li>WordPress 1-Click Install</li>
-                  <li>Unlimited Subdomain</li>
-                  <li class="not-chacked">unlimited database</li>
-                  <li class="not-chacked">SSH/Terminal</li>
+                     <li>Unlimited NVMe SSD Space</li>
+                     <li>Unlimited bandwidth</li>
+                     <li>Unlimited Email Account(s)</li>
+                     <li>Cpanel</li>
+                     <li>SSL Certificate</li>
+                     <li>WordPress 1-Click Install</li>
+                     <li>Unlimited Subdomain</li>
+                     <li class="not-chacked">unlimited database</li>
+                     <li class="not-chacked">SSH/Terminal</li>
                </ul>
-               <a class="second-pricing-table-button" href="#">next setup</a>
+               <a class="first-pricing-table-order" href="javascript:void(0)" onclick="addToCart('standard')">order now</a>
             </div>
          </div>
          <div class="col-md-4">
-            <div class="second-pricing-table">
-               <h5 class="second-pricing-table-title">Expert plan <span>Best for Two Website</span></h5>
-               <span class="second-pricing-table-price monthly">
-               <i class="monthly">{{env('plus_month_plan')}}<small>/mo</small></i>
-               <i class="yearly">{{env('plus_year_plan')}}<small>/year</small></i>
+            <div class="first-pricing-table best-plan">
+               <span class="first-pricing-table-most">most popular</span>
+               <i style="font-family: 'Font Awesome 5 Free'" class="fas fa-meteor first-pricing-table-icon"></i>
+               <h5 class="first-pricing-table-title">advanced <span>Best for Two Website</span></h5>
+               <span class="first-pricing-table-price monthly">
+                  <i class="monthly">{!! $data['currency_symbol'] . $data['advanced_price'] !!}<small>/mo</small></i>
                </span>
-               <ul class="second-pricing-table-body">
+               <ul class="first-pricing-table-body">
                   <li>2 Website</li>
-                  <li>Unlimited NVMe SSD Space</li>
-                  <li>Unlimited bandwidth</li>
-                  <li>Unlimited Email Account(s)</li>
-                  <li>Cpanel</li>
-                  <li>SSL Certificate</li>
-                  <li>WordPress 1-Click Install</li>
-                  <li>Unlimited Subdomain</li>
-                  <li class="not-chacked">unlimited database</li>
-                  <li class="not-chacked">SSH/Terminal</li>
+                     <li>Unlimited NVMe SSD Space</li>
+                     <li>Unlimited bandwidth</li>
+                     <li>Unlimited Email Account(s)</li>
+                     <li>Cpanel</li>
+                     <li>SSL Certificate</li>
+                     <li>WordPress 1-Click Install</li>
+                     <li>Unlimited Subdomain</li>
+                     <li class="not-chacked">unlimited database</li>
+                     <li class="not-chacked">SSH/Terminal</li>
                </ul>
-               <a class="second-pricing-table-button" href="#">next setup</a>
+               <a class="first-pricing-table-order" href="javascript:void(0)" onclick="addToCart('advanced')">order now</a>
             </div>
          </div>
          <div class="col-md-4">
-            <div class="second-pricing-table style-2 active">
-               <h5 class="second-pricing-table-title">Relluxe plan <span>Best for Unlimited Website</span></h5>
-               <span class="second-pricing-table-price monthly">
-               <i class="monthly">{{env('pro_month_plan')}}<small>/mo</small></i>
-               <i class="yearly">{{env('pro_year_plan')}}<small>/year</small></i>
+            <div class="first-pricing-table">
+               <i style="font-family: 'Font Awesome 5 Free'" class="fas fa-poo-storm first-pricing-table-icon"></i>
+               <h5 class="first-pricing-table-title">entreprise <span>Best for Unlimited Website</span></h5>
+               <span class="first-pricing-table-price monthly">
+                  <i class="monthly">{!! $data['currency_symbol'] . $data['enterprise_price'] !!}<small>/mo</small></i>
                </span>
-               <ul class="second-pricing-table-body">
+               <ul class="first-pricing-table-body">
                   <li>Unlimited Website</li>
-                  <li>Unlimited NVMe SSD Space</li>
-                  <li>Unlimited bandwidth</li>
-                  <li>Unlimited Email Account(s)</li>
-                  <li>Cpanel</li>
-                  <li>SSL Certificate</li>
-                  <li>WordPress 1-Click Install</li>
-                  <li>Unlimited Subdomain</li>
-                  <li>unlimited database</li>
-                  <li>SSH/Terminal</li>
+                     <li>Unlimited NVMe SSD Space</li>
+                     <li>Unlimited bandwidth</li>
+                     <li>Unlimited Email Account(s)</li>
+                     <li>Cpanel</li>
+                     <li>SSL Certificate</li>
+                     <li>WordPress 1-Click Install</li>
+                     <li>Unlimited Subdomain</li>
+                     <li>unlimited database</li>
+                     <li>SSH/Terminal</li>
                </ul>
-               <a class="second-pricing-table-button" href="#">next setup</a>
+               <a class="first-pricing-table-order" href="javascript:void(0)" onclick="addToCart('enterprise')">order now</a>
+            </div>
+         </div>
+      </div>
+      <div class="row justify-content-start mr-tp-50">
+         <div class="col-md-4">
+            <div class="host-pack-features">
+               <i class="fas fa-dollar-sign"></i>
+               <h5>30days money back</h5>
+               <p>is simply dummy text of the printing</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="host-pack-features">
+               <i class="fas fa-check"></i>
+               <h5>secure payment transaction</h5>
+               <p>is simply dummy text of the printing</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="host-pack-features">
+               <i class="far fa-life-ring"></i>
+               <h5>fast support responding</h5>
+               <p>is simply dummy text of the printing</p>
             </div>
          </div>
       </div>
    </div>
 </section>
-<section class="our-pertners white-bg">
-   <div class="container">      
-      <h2 class="d-none">our pertners</h2>
-      <div class="owl-carousel pertners-carousel owl-theme">
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo1.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo2.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo3.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo4.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo5.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo1.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo2.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo3.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo4.png" alt /> </a>
-         </div>
-         <div class="item">
-            <a href="#"> <img src="templates/bredh-moon/img/pertners/logo5.png" alt /> </a>
-         </div>
-      </div>
-   </div>
-</section>
+
 <section class="section-wth-amwaj">
    <div class="bg_overlay_section-amwaj">
       <img src="templates/bredh-moon/img/bg/b_bg_02.jpg" alt="img-bg">

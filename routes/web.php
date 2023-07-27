@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginRegistrationController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\DomainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +19,7 @@ use App\Http\Controllers\ServiceController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[HomeController::class,'index']);
 Route::get('paypal', function () {
     return view('paypal');
 });
@@ -27,12 +27,16 @@ Route::get('privacy-policy', function () {
     return view('privacy-policy');
 });
 Route::get('domain-search', [ServiceController::class, 'domainSearch']); 
+Route::get('add-domain', [DomainController::class, 'addDomain']); 
 Route::get('our-service', [ServiceController::class, 'webHosting']); 
 Route::get('web-hosting-starter', [ServiceController::class, 'webHosting']); 
 Route::get('web-hosting-plus', [ServiceController::class, 'webHosting']); 
 Route::get('web-hosting-pro', [ServiceController::class, 'webHosting']); 
 Route::get('contact-us', [ContactController::class, 'index']); 
 Route::get('cart', [CartController::class, 'index']); 
+
+Route::post('/add-to-cart', [CartController::class,'addToCart'])->name('cart.add');
+Route::post('/add-domain-process', [DomainController::class,'addDomainProcess']);
 
 Route::get('dashboard', [LoginRegistrationController::class, 'dashboard']); 
 Route::get('login', [LoginRegistrationController::class, 'index']);

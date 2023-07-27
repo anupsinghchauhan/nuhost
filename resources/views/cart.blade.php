@@ -45,9 +45,47 @@
                                  </div>
                               </div>
                               <div class="view-cart-items">
+                                 @if(count($cart) == 0)
                                  <div class="view-cart-empty">
                                     Your Shopping Cart is Empty
                                  </div>
+                                 @else
+                                 <div class="item">
+                                    <div class="row">
+                                    <div class="col-sm-7">
+                                    <span class="item-title">
+                                    Basic plan
+                                    <a href="/cart.php?a=confproduct&amp;i=0" class="btn btn-link btn-xs">
+                                     <i class="fas fa-pencil-alt"></i>
+                                    Edit
+                                    </a>
+                                    <span class="visible-xs-inline d-inline d-sm-none">
+                                    <button type="button" class="btn btn-link btn-xs btn-remove-from-cart" onclick="if (!window.__cfRLUnblockHandlers) return false; removeItem('p','0')">
+                                    <i class="fas fa-times"></i>
+                                    Remove
+                                    </button>
+                                    </span>
+                                    </span>
+                                    <span class="item-group">
+                                    shared Hosting
+                                    </span>
+                                    <span class="item-domain">
+                                    googleasdas.com
+                                    </span>
+                                    </div>
+                                    <div class="col-sm-4 item-price">
+                                    <span>$33.00 USD</span>
+                                    <span class="cycle">One Time</span>
+                                    $2.00 Setup Fee
+                                    </div>
+                                    <div class="col-sm-1 hidden-xs d-none d-sm-block">
+                                    <button type="button" class="btn btn-link btn-xs btn-remove-from-cart" onclick="if (!window.__cfRLUnblockHandlers) return false; removeItem('p','0')">
+                                    <i class="fas fa-times"></i>
+                                    </button>
+                                    </div>
+                                    </div>
+                                 </div>   
+                                 @endif
                               </div>
                            </form>
                            <div class="view-cart-tabs">
