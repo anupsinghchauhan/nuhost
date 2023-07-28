@@ -36,5 +36,13 @@ return [
             'PRICE' => 2.00,
         ],
     ],
+    'SETUP_CHARGE'=>[
+        'INR' => [
+            'PRICE' => 49.00,
+        ],
+        'USD' => [
+            'PRICE' => 30.00,
+        ],
+    ],
 
 ];

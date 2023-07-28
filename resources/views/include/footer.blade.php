@@ -173,6 +173,8 @@
 <form action="{{ route('cart.add') }}" method="POST" id="add_to_cart">
    @csrf
    <input type="hidden" name="add_to_cart_product_name" id="add_to_cart_product_name" value="STANDARD">
+   <input type="hidden" name="_hosting_duration" id="_hosting_duration" value="12">
+   <input type="hidden" name="_mode" id="_mode" value="">
 </form>
 {{-- com add to form  --}}
    <script src="{{URL::asset('templates/bredh-moon/js/template-scripts.js')}}" type="text/javascript"></script>
@@ -204,6 +206,12 @@
       });
       const addToCart = (product_name) => {
          $("#add_to_cart_product_name").val(product_name);
+         $("#add_to_cart").submit();
+      }
+
+      const applyHostingDuration = (month) =>{
+         $("#_hosting_duration").val(month);
+         $("#_mode").val('update_duration');
          $("#add_to_cart").submit();
       }
 
