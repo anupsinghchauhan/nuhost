@@ -163,11 +163,11 @@
                                  </div>
                                  <div class="express-checkout-buttons"></div>
                                  <div class="text-right">
-                                    <a href="cart0973-2.html?a=checkout&amp;e=false" class="btn btn-success btn-lg btn-checkout disabled" id="checkout">
+                                    <a href="{{URL('checkout')}}" class="btn btn-success btn-lg btn-checkout" id="checkout">
                                     Checkout
                                     <i class="fas fa-arrow-right"></i>
                                     </a><br/>
-                                    <a href="index1321.html" class="btn btn-link btn-continue-shopping" id="continueShopping">
+                                    <a href="javascript:void(0)" class="btn btn-link btn-continue-shopping" id="continueShopping">
                                     Continue Shopping
                                     </a>
                                  </div>

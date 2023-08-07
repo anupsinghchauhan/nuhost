@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ Route::get('privacy-policy', function () {
     return view('privacy-policy');
 });
 Route::get('domain-search', [ServiceController::class, 'domainSearch']); 
+Route::get('checkout', [CheckoutController::class, 'index']); 
 Route::get('add-domain', [DomainController::class, 'addDomain']); 
 Route::get('our-service', [ServiceController::class, 'webHosting']); 
 Route::get('web-hosting-starter', [ServiceController::class, 'webHosting']); 

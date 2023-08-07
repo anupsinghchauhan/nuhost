@@ -20,15 +20,12 @@
    <script type="text/javascript" src="assets/js/StatesDropdown.js"></script>
    <script type="text/javascript" src="assets/js/PasswordStrength.js"></script>
    <script type="text/javascript">
-      window.langPasswordStrength = "Надійність паролю";
-      window.langPasswordWeak = "Слабкий";
-      window.langPasswordModerate = "Середній";
-      window.langPasswordStrong = "Сильний";
-      jQuery(document).ready(function()
-      {
-          jQuery("#inputNewPassword1").keyup(registerFormPasswordStrengthFeedback);
-      });
-   </script>
+      window.langPasswordStrength = "Password Strength";
+      window.langPasswordWeak = "Weak";
+      window.langPasswordModerate = "Moderate";
+      window.langPasswordStrong = "Strong";
+  </script>
+  
    <div class="custom-login-page">
       <div class="login-left-side-custom">
          <div id="particles-bg"></div>
@@ -897,11 +894,20 @@
                                  <input type="password" name="password2" id="inputNewPassword2" class="field" placeholder="Confirm Password" autocomplete="off">
                               </div>
                            </div>
-                           <div class="col-sm-6" style="margin-bottom: 13px;">
+                           <div class="col-sm-6">
                               <button type="button" class="btn btn-default btn-sm generate-password" data-targetfields="inputNewPassword1,inputNewPassword2">
                               Generate Password
                               </button>
                            </div>
+                           <div class="col-sm-6">
+                              <div class="password-strength-meter">
+                              <div class="progress">
+                              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="passwordStrengthMeterBar">
+                              </div>
+                              </div>
+                              <p class="text-center small text-muted" id="passwordStrengthTextLabel">Password Strength: Enter a Password</p>
+                              </div>
+                              </div>
                         </div>
                      </div>
                      <div class="marketing-email-optin">
